@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+  
+  --color-black: #111111;
+  --color-white: #ffffff;
+  --color-gold: #b08d6a;
+  --color-beige: #f8f6f3;
+  --color-accent: #d4b89c;
+}
+
+@layer base {
+  body {
+    @apply bg-beige text-black;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
